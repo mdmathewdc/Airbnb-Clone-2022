@@ -1,10 +1,64 @@
+@font-face {
+  font-family: Circular;
+  unicode-range: U+0000-03FF, U+0500-058F, U+0700-074F, U+0780-FAFF, U+FE00-FE6F,
+    U+FF00-EFFFF, U+FFFFE-10FFFF;
+  font-weight: normal;
+  font-style: normal;
+  src: url("./fonts/Airbnb_Cereal-Book.woff2")
+      format("woff2");
+  font-display: swap;
+}
+@font-face {
+  font-family: Circular;
+  unicode-range: U+0000-03FF, U+0500-058F, U+0700-074F, U+0780-FAFF, U+FE00-FE6F,
+    U+FF00-EFFFF, U+FFFFE-10FFFF;
+  font-weight: 600;
+  font-style: normal;
+  src: url("./fonts/Airbnb_Cereal-Medium.woff2")
+      format("woff2");
+  font-display: swap;
+}
+@font-face {
+  font-family: Circular;
+  unicode-range: U+0000-03FF, U+0500-058F, U+0700-074F, U+0780-FAFF, U+FE00-FE6F,
+    U+FF00-EFFFF, U+FFFFE-10FFFF;
+  font-weight: 800;
+  font-style: normal;
+  src: url("./fonts/Airbnb_Cereal-Bold.woff2")
+      format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Circular;
+  font-weight: normal;
+  font-style: normal;
+  src: url("./fonts/Airbnb_Cereal-Book.woff2")
+      format("woff2");
+  font-display: swap;
+}
+@font-face {
+  font-family: Circular;
+  font-weight: 600;
+  font-style: normal;
+  src: url("./fonts/Airbnb_Cereal-Medium.woff2")
+      format("woff2");
+  font-display: swap;
+}
+@font-face {
+  font-family: Circular;
+  font-weight: 800;
+  font-style: normal;
+  src: url("./fonts/Airbnb_Cereal-Bold.woff2")
+      format("woff2");
+  font-display: swap;
+}
+
 body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: 'Circular', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
