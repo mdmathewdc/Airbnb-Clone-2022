@@ -91,6 +91,10 @@ export const TextContent = styled.div`
     padding 0 40px;
     top: 30%;
   }
+
+  @media ${device.LAPTOP} {
+    width: 500px;
+  }
 `;
 
 export default TryHosting;
