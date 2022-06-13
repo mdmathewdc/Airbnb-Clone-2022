@@ -1,4 +1,4 @@
-import { Header, Hero, Footer, TryHosting } from "./components";
+import { Header, Hero, Footer, TryHosting, Features } from "./components";
 import GlobalStyle from "./global.css";
 
 function App() {
@@ -8,6 +8,7 @@ function App() {
       <Header />
       <Hero />
       <TryHosting />
+      <Features />
       <Footer />
     </div>
   );
