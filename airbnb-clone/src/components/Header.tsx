@@ -11,7 +11,7 @@ const Header = (props: Props) => {
     <StyledHeader>
       <a href="" className="main-logo">
         <StyledIconLogo />
-        <TextLogo />
+        <StyledTextLogo />
       </a>
       <StyledLinks>
         <a href="">Become a host</a>
@@ -36,15 +36,25 @@ export const StyledHeader = styled.header`
   }
 `;
 
-export const StyledLinks = styled.span`
+export const StyledTextLogo = styled(TextLogo)`
+  display: none;
+  @media ${device.TABLET} {
+    display: inline-block;
+  }
+`;
 
+export const StyledLinks = styled.span`
   display: flex;
   a {
     color: black;
     text-decoration: none;
     padding: 20px 0;
-    margin: 0 8px;
+    margin: 0 16px;
     font-weight: 600;
+
+    @media ${device.TABLET} {
+      margin: 0 8px;
+    }
   }
 
   a:first-child {
