@@ -12,6 +12,7 @@ const GlobalStyle = createGlobalStyle`
 body {
   color: ${black};
   padding: 0 24px;
+  margin: auto;
   width: 100%;
   font-size: 14px;
   box-sizing: border-box;

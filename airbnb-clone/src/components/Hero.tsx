@@ -10,34 +10,38 @@ const Hero = (props: Props) => {
   return (
     <StyledHero>
       <SearchBox />
-      <img src={HouseImage} alt="house" />
+      <ImageWrapper>
+        <img src={HouseImage} alt="house" />
+      </ImageWrapper>
     </StyledHero>
   );
 };
 
 export const StyledHero = styled.div`
-  position: relative;
-  padding-top: 14px;
+  display: grid;
+  padding-top: 14x;
   padding-bottom: 56px;
 
+  @media ${device.TABLET} {
+    padding-top: 0;
+    padding-bottom: 43px;
+  }
+`;
+
+export const ImageWrapper = styled.div`
+  grid-area: 1 / 1;
+
   img {
-    position: absolute;
-    top: 0;
     width: 75%;
     margin-left: 25%;
-    border-radius: 19px;
-    height: 610px;
+    border-radius: 8px;
+    height: 100%;
     object-fit: cover;
     display: none;
 
     @media ${device.TABLET} {
       display: block;
     }
-  }
-
-  @media ${device.TABLET} {
-    padding-top: 40px;
-    padding-bottom: 43px;
   }
 `;
 
