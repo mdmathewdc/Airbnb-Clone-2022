@@ -75,8 +75,13 @@ export const TextContent = styled.div`
     margin-bottom: 16px;
 
     @media ${device.LAPTOP} {
+      margin-bottom: 24px;
       font-size: 18px;
       line-height: 24px;
+    }
+
+    @media ${device.DESKTOP} {
+      margin-bottom: 40px;
     }
   }
 
