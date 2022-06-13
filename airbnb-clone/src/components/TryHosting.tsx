@@ -36,6 +36,13 @@ export const StyledTryHosting = styled.div`
     @media ${device.TABLET} {
       height: 360px;
     }
+
+    @media ${device.LAPTOP} {
+      height: 400px;
+    }
+    @media ${device.DESKTOP} {
+      height: 480px;
+    }
   }
 `;
 
@@ -55,19 +62,29 @@ export const TextContent = styled.div`
     font-weight: 600;
     padding-bottom: 8px;
     line-height: 36px;
+
+    @media ${device.LAPTOP} {
+      font-size: 48px;
+      line-height: 50px;
+    }
   }
 
   .subtitle {
     font-size: 16px;
     line-height: 20px;
     margin-bottom: 16px;
+
+    @media ${device.LAPTOP} {
+      font-size: 18px;
+      line-height: 24px;
+    }
   }
 
   @media ${device.TABLET} {
     width: 360px;
     text-align: left;
-    right: unset;
     padding 0 40px;
+    top: 30%;
   }
 `;
 
