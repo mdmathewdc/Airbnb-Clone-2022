@@ -9,8 +9,8 @@ type Props = {};
 const Hero = (props: Props) => {
   return (
     <StyledHero>
-      <img src={HouseImage} alt="house" />
       <SearchBox />
+      <img src={HouseImage} alt="house" />
     </StyledHero>
   );
 };

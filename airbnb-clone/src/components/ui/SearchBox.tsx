@@ -14,6 +14,14 @@ const SearchBox = (props: Props) => {
       <input type={"text"} placeholder={"LOCATION"} />
       <input type={"text"} placeholder={"LOCATION"} />
       <input type={"text"} placeholder={"LOCATION"} />
+      <Subtitle>Discover entire homes and private rooms perfect for any trip.</Subtitle>
+
+      <Subtitle>Discover entire homes and private rooms perfect for any trip.</Subtitle>
+
+      <Subtitle>Discover entire homes and private rooms perfect for any trip.</Subtitle>
+
+      <Subtitle>Discover entire homes and private rooms perfect for any trip.</Subtitle>
+
     </StyledSearchBox>
   );
 };
@@ -39,6 +47,7 @@ export const StyledSearchBox = styled.div`
 
     h1 {
       font-size: 32px;
+      line-height: 36px;
     }
   }
 `;
