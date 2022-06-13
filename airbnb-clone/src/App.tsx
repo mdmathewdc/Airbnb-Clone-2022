@@ -1,6 +1,4 @@
-import { Header } from "./components";
-import styled from "styled-components";
-import { ThemeProvider } from "styled-components";
+import { Header, Hero } from "./components";
 import GlobalStyle from "./global.css";
 
 function App() {
@@ -8,6 +6,7 @@ function App() {
     <div className="App">
       <GlobalStyle />
       <Header />
+      <Hero />
     </div>
   );
 }

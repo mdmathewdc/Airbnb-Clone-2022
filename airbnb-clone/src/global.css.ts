@@ -1,9 +1,16 @@
 import { createGlobalStyle } from "styled-components";
 import { device } from "./constants/ui/breakpoints";
+import { black } from  "./constants/ui/colors";
 
 const GlobalStyle = createGlobalStyle`
-body {
+
+* {
+  padding: 0;
   margin: 0;
+}
+
+body {
+  color: ${black};
   padding: 0 24px;
   width: 100%;
   font-size: 14px;
