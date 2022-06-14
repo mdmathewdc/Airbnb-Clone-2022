@@ -5,6 +5,7 @@ import { device } from "../constants/ui/breakpoints";
 import { ReactComponent as Facebook } from "../images/svg/facebook.svg";
 import { ReactComponent as Twitter } from "../images/svg/twitter.svg";
 import { ReactComponent as Instagram } from "../images/svg/instagram.svg";
+import { grey } from "../constants/ui/colors";
 
 type Props = {};
 
@@ -50,6 +51,7 @@ export const StyledFooter = styled.div`
 `;
 
 export const Credits = styled.p`
+  color: ${grey};
   font-size: 12px;
   line-height: 1;
   margin-top: 8px;

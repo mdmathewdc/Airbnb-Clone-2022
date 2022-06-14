@@ -27,6 +27,7 @@ const TryHosting = (props: Props) => {
 
 export const StyledTryHosting = styled.div`
   position: relative;
+  padding-bottom: 56px;
 
   img {
     width: 100%;

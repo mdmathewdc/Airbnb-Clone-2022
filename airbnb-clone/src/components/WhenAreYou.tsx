@@ -1,11 +1,44 @@
-import React from 'react'
+import React from "react";
+import styled from "styled-components";
+import { grey } from "../constants/ui/colors";
+import { device } from "../constants/ui/breakpoints";
 
-type Props = {}
+type Props = {};
 
 const WhenAreYou = (props: Props) => {
   return (
-    <div>WhenAreYou</div>
-  )
-}
+    <StyledWhenAreYou>
+      <div>When are you travelling?</div>
+      <p>Add dates for updated price and availability</p>
+      <button>Add dates</button>
+    </StyledWhenAreYou>
+  );
+};
+
+export const StyledWhenAreYou = styled.div`
+  padding: 56px 0;
+  
+  div {
+    font-size: 22px;
+    line-height: 26px;
+    font-weight: 600;
+    margin-bottom: 8px;
+  }
+
+  p {
+    color: ${grey};
+    font-size: 16px;
+    line-height: 20px;
+    margin-bottom: 16px;
+  }
+
+  @media ${device.TABLET} {
+    div {
+      font-size: 26px;
+      line-height: 30px;
+      margin-bottom: 8px;
+    }
+  }
+`;
 
 export default WhenAreYou;
