@@ -1,4 +1,4 @@
-import React from "react";
+import React, { FunctionComponent, SVGProps } from "react";
 import styled from "styled-components";
 import { ReactComponent as messaging } from "../images/svg/messaging.svg";
 import { ReactComponent as home } from "../images/svg/home.svg";
@@ -14,7 +14,7 @@ const Features = (props: Props) => {
   }
 
   const renderIcon = (iconName: string) => {
-    const svgIcons = {
+    const svgIcons: any = {
       messaging,
       home,
       emptystar,
