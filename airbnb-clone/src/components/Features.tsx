@@ -4,6 +4,7 @@ import { ReactComponent as messaging } from "../images/svg/messaging.svg";
 import { ReactComponent as home } from "../images/svg/home.svg";
 import { ReactComponent as emptystar } from "../images/svg/emptystar.svg";
 import { lightGrey } from "../constants/ui/colors";
+import { device } from "../constants/ui/breakpoints";
 
 type Props = {};
 
@@ -48,9 +49,9 @@ const Features = (props: Props) => {
     <StyledFeatures>
       {featuresData.map((feature, index) => (
         <div className="feature-tile">
-          <div>{renderIcon(feature.icon)}</div>
-          <div>{feature.name}</div>
-          <div>{feature.description}</div>
+          <div className="icon">{renderIcon(feature.icon)}</div>
+          <div className="name">{feature.name}</div>
+          <div className="description">{feature.description}</div>
         </div>
       ))}
     </StyledFeatures>
@@ -60,13 +61,49 @@ const Features = (props: Props) => {
 export const StyledFeatures = styled.div`
   display: grid;
   grid-template-columns: repeat(12, 1fr);
+  grid-column-gap: 16px;
+  grid-row-gap: 24px;
   border-top: 1px solid ${lightGrey};
   border-bottom: 1px solid ${lightGrey};
+  padding: 28px 0;
 
   .feature-tile {
-    // display: flex;
-    // flex-direction: column;
-    grid-column: span 4;
+    grid-column: span 12;
+  }
+
+  .icon {
+    margin-bottom: 16px;
+  }
+
+  .name {
+    font-size: 18px;
+    line-height: 22px;
+    font-weight: 600;
+    margin-bottom: 8px;
+  }
+
+  .description {
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  @media ${device.TABLET} {
+    padding: 40px 0;
+
+    .feature-tile {
+      grid-column: span 4;
+    }
+
+    .name {
+      font-size: 22px;
+      line-height: 26px;
+    }
+
+    .description {
+      font-size: 16px;
+      line-height: 24px;
+    }
   }
 `;
+
 export default Features;
