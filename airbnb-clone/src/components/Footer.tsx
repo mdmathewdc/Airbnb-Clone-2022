@@ -33,15 +33,33 @@ export const StyledFooter = styled.div`
   padding: 16px 0 56px 0;
 
   @media ${device.TABLET} {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
     text-align: center;
+    align-items: center;
+  }
+
+  @media ${device.LAPTOP} {
+    display: flex;
+    flex-flow: row-reverse;
+    justify-content: space-between;
+    text-align: center;
+    align-items: flex-start;
   }
 `;
 
 export const Credits = styled.p`
   font-size: 12px;
+  line-height: 1;
+  margin-top: 8px;
 
   @media ${device.TABLET} {
     font-size: 14px;
+  }
+
+  @media ${device.LAPTOP} {
+    margin-top: 0;
   }
 `;
 
@@ -50,6 +68,13 @@ export const Logos = styled.div`
   @media ${device.TABLET} {
     display: flex;
     cursor: pointer;
+    justify-content: center;
+    gap: 16px;
+    text-align: center;
+    margin-bottom: 16px;
+  }
+
+  @media ${device.LAPTOP} {
     justify-content: center;
     gap: 16px;
     text-align: center;
