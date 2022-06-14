@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { ReactComponent as messaging } from "../images/svg/messaging.svg";
 import { ReactComponent as home } from "../images/svg/home.svg";
 import { ReactComponent as emptystar } from "../images/svg/emptystar.svg";
+import { lightGrey } from "../constants/ui/colors";
 
 type Props = {};
 
@@ -46,17 +47,26 @@ const Features = (props: Props) => {
   return (
     <StyledFeatures>
       {featuresData.map((feature, index) => (
-        <>
+        <div className="feature-tile">
           <div>{renderIcon(feature.icon)}</div>
           <div>{feature.name}</div>
           <div>{feature.description}</div>
-        </>
+        </div>
       ))}
     </StyledFeatures>
   );
 };
 
 export const StyledFeatures = styled.div`
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  border-top: 1px solid ${lightGrey};
+  border-bottom: 1px solid ${lightGrey};
+
+  .feature-tile {
+    // display: flex;
+    // flex-direction: column;
+    grid-column: span 4;
+  }
 `;
 export default Features;
