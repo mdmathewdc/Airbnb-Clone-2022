@@ -56,10 +56,6 @@ export const Credits = styled.p`
   line-height: 1;
   margin-top: 8px;
 
-  @media ${device.TABLET} {
-    font-size: 14px;
-  }
-
   @media ${device.LAPTOP} {
     margin-top: 0;
   }
