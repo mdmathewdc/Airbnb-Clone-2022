@@ -45,6 +45,10 @@ const Reviews = (props: Props) => {
     return [...Array(stars)].map((e, i) => <StyledStar />);
   };
 
+  const getImageUrl = (name: string) => {
+    return new URL(`/src/images/reviews/${name}.jpeg`, import.meta.url).href;
+  };
+
   return (
     <StyledReviews>
       <TextContainer>
@@ -57,17 +61,11 @@ const Reviews = (props: Props) => {
       <ReviewsContainer>
         {reviewsData.map((item, index) => (
           <div className="review-wrapper">
-            <img
-              className="house-image"
-              src={`/src/images/reviews/${item.picture}.webp`}
-            />
+            <img className="house-image" src={getImageUrl(item.picture)} />
             <div className="star-wrapper">{renderStars(item.star)}</div>
             <p className="description">{item.description}</p>
             <div className="host-wrapper">
-              <img
-                src={`/src/images/reviews/${item.name}.jpeg`}
-                className="customer-image"
-              />
+              <img src={getImageUrl(item.picture)} className="customer-image" />
               <div>
                 <p className="name">{item.name}</p>
                 <p className="location">{item.location}</p>
