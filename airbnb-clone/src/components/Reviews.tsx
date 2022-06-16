@@ -36,6 +36,7 @@ const Reviews = (props: Props) => {
       location: "Australia",
     },
   ];
+
   return (
     <StyledReviews>
       <TextContainer>
@@ -46,7 +47,16 @@ const Reviews = (props: Props) => {
         </p>
       </TextContainer>
       <ReviewsContainer>
-        <p> REVIEW HERE </p>
+        {reviewsData.map((item, index) => (
+          <div>
+            <img
+              className="house-image"
+              src={`/src/images/reviews/${item.picture}.webp`}
+            />
+            <p>{item.name}</p>
+            <p>{item.description}</p>
+          </div>
+        ))}
       </ReviewsContainer>
     </StyledReviews>
   );
@@ -79,6 +89,10 @@ export const ReviewsContainer = styled.div`
   grid-column-gap: 16px;
   grid-row-gap: 24px;
   grid-column: span 12;
+
+  .house-image {
+    border-radius: 12px;
+  }
 
   @media ${device.TABLET} {
     grid-column: span 4;
