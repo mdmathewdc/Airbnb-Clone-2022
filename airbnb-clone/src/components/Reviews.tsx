@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { black, grey, darkGrey } from "../constants/ui/colors";
 import { device } from "../constants/ui/breakpoints";
+import { ReactComponent as Star } from "../images/svg/color-star.svg";
 
 type Props = {};
 
@@ -41,9 +42,7 @@ const Reviews = (props: Props) => {
   ];
 
   const renderStars = (stars: number) => {
-    return [...Array(stars)].map((e, i) => (
-      <Star src={`/src/images/svg/color-star.svg`} />
-    ));
+    return [...Array(stars)].map((e, i) => <StyledStar />);
   };
 
   return (
@@ -98,7 +97,7 @@ export const StyledReviews = styled.div`
   }
 `;
 
-export const Star = styled.img`
+export const StyledStar = styled(Star)`
   margin-left: 4px;
   height: 16px;
   width: 16px;
@@ -124,6 +123,7 @@ export const ReviewsContainer = styled.div`
 
   .star-wrapper {
     margin: 12px 0;
+    display: flex;
   }
 
   .review-wrapper {
