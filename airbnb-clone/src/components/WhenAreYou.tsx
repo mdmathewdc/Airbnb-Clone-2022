@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { grey } from "../constants/ui/colors";
 import { device } from "../constants/ui/breakpoints";
+import { Button } from "../components/ui";
 
 type Props = {};
 
@@ -10,14 +11,14 @@ const WhenAreYou = (props: Props) => {
     <StyledWhenAreYou>
       <div>When are you travelling?</div>
       <p>Add dates for updated price and availability</p>
-      <button>Add dates</button>
+      <Button color="#000" text="add fdates"></Button>
     </StyledWhenAreYou>
   );
 };
 
 export const StyledWhenAreYou = styled.div`
   padding: 56px 0;
-  
+
   div {
     font-size: 22px;
     line-height: 26px;
