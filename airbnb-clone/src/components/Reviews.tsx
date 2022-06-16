@@ -44,6 +44,7 @@ const Reviews = (props: Props) => {
   const renderStars = (stars: number) => {
     return [...Array(stars)].map((e, i) => <StyledStar />);
   };
+  
 
   const getImageUrl = (name: string) => {
     return new URL(`/src/images/reviews/${name}.jpeg`, import.meta.url).href;
