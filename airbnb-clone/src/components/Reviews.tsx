@@ -65,7 +65,7 @@ const Reviews = (props: Props) => {
             <div className="star-wrapper">{renderStars(item.star)}</div>
             <p className="description">{item.description}</p>
             <div className="host-wrapper">
-              <img src={getImageUrl(item.picture)} className="customer-image" />
+              <img src={getImageUrl(item.name)} className="customer-image" />
               <div>
                 <p className="name">{item.name}</p>
                 <p className="location">{item.location}</p>
