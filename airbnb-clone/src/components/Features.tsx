@@ -8,13 +8,13 @@ import { device } from "../constants/ui/breakpoints";
 
 type Props = {};
 
-const Features = (props: Props) => {
-  interface FeatureData {
-    name: string;
-    description: string;
-    icon: string;
-  }
+interface FeatureData {
+  name: string;
+  description: string;
+  icon: string;
+}
 
+const Features = (props: Props) => {
   const renderIcon = (iconName: string) => {
     const svgIcons: any = {
       messaging,

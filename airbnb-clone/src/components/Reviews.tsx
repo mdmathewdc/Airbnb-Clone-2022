@@ -1,10 +1,41 @@
 import React from "react";
 import styled from "styled-components";
 import { grey } from "../constants/ui/colors";
+import { device } from "../constants/ui/breakpoints";
 
 type Props = {};
 
+type ReviewsData = {
+  picture: string;
+  star: number;
+  description: string;
+  name: string;
+  location: string;
+};
 const Reviews = (props: Props) => {
+  const reviewsData: ReviewsData[] = [
+    {
+      picture: "home1",
+      star: 5,
+      description: "It was great",
+      name: "Downey",
+      location: "Australia",
+    },
+    {
+      picture: "home2",
+      star: 4,
+      description: "It was cool",
+      name: "Evans",
+      location: "Australia",
+    },
+    {
+      picture: "home3",
+      star: 5,
+      description: "It was alright",
+      name: "Hemsworth",
+      location: "Australia",
+    },
+  ];
   return (
     <StyledReviews>
       <TextContainer>
@@ -22,6 +53,7 @@ const Reviews = (props: Props) => {
 };
 
 export const StyledReviews = styled.div`
+  padding-bottom: 56px;
   h2 {
     font-size: 22px;
     line-height: 26px;
@@ -42,7 +74,15 @@ export const TextContainer = styled.div`
 `;
 
 export const ReviewsContainer = styled.div`
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-column-gap: 16px;
+  grid-row-gap: 24px;
+  grid-column: span 12;
 
+  @media ${device.TABLET} {
+    grid-column: span 4;
+  }
 `;
 
 export default Reviews;
