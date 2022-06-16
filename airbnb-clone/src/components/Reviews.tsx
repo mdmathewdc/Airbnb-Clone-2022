@@ -60,13 +60,13 @@ const Reviews = (props: Props) => {
           <div className="review-wrapper">
             <img
               className="house-image"
-              src={`/src/images/reviews/${item.picture}.webp`}
+              src={require(`/src/images/reviews/${item.picture}.webp`)}
             />
             <div className="star-wrapper">{renderStars(item.star)}</div>
             <p className="description">{item.description}</p>
             <div className="host-wrapper">
               <img
-                src={`/src/images/reviews/${item.name}.jpeg`}
+                src={require(`/src/images/reviews/${item.name}.jpeg`)}
                 className="customer-image"
               />
               <div>
