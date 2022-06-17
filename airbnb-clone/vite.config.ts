@@ -6,6 +6,6 @@ import svgr from 'vite-plugin-svgr'
 export default defineConfig({
   plugins: [react(), svgr()],
   build: {
-    assetsInlineLimit: 2048 // Otherwise images upto this size won't be part of the build
+    assetsInlineLimit: 1024 // Otherwise images upto this size won't be part of the build
   }
 })
