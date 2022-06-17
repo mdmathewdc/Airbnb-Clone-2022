@@ -11,7 +11,7 @@ const WhenAreYou = (props: Props) => {
     <StyledWhenAreYou>
       <div>When are you travelling?</div>
       <p>Add dates for updated price and availability</p>
-      <Button color="#000" text="add fdates"></Button>
+      <Button color="#000" text="Add dates" textColor="#fff"></Button>
     </StyledWhenAreYou>
   );
 };
