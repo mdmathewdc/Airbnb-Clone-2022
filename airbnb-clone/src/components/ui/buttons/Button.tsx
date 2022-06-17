@@ -47,7 +47,6 @@ export const StyledButton = styled.button<{
 
   label {
     font-size: ${(props) => props.fontSize};
-    font-weight: 600;
     line-height: 20px;
   }
 `;
