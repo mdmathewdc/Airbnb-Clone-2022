@@ -5,11 +5,27 @@ type ButtonProps = {
   bgColor: string;
   text: string;
   textColor: string;
+  padding: string;
+  fontSize: string;
+  width?: string;
 };
 
-const Button = ({ bgColor, text, textColor }: ButtonProps) => {
+const Button = ({
+  bgColor,
+  text,
+  textColor,
+  padding,
+  fontSize,
+  width,
+}: ButtonProps) => {
   return (
-    <StyledButton bgColor={bgColor} textColor={textColor}>
+    <StyledButton
+      bgColor={bgColor}
+      textColor={textColor}
+      padding={padding}
+      fontSize={fontSize}
+      width={width}
+    >
       <label>{text}</label>
     </StyledButton>
   );
@@ -18,16 +34,19 @@ const Button = ({ bgColor, text, textColor }: ButtonProps) => {
 export const StyledButton = styled.button<{
   textColor: string;
   bgColor: string;
+  padding: string;
+  fontSize: string;
+  width?: string;
 }>`
   background: ${(props) => props.bgColor};
   color: ${(props) => props.textColor};
-  padding: 16px 24px;
+  padding: ${(props) => props.padding};
   border-radius: 8px;
   border: none;
-  width: 100%;
+  width: ${(props) => props.width};
 
   label {
-    font-size: 16px;
+    font-size: ${(props) => props.fontSize};
     font-weight: 600;
     line-height: 20px;
   }

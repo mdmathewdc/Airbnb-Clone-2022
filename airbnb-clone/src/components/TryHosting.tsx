@@ -3,6 +3,8 @@ import styled from "styled-components";
 import { device } from "../constants/ui/breakpoints";
 import HostHorizontal from "../images/real/host-horizontal.jpg";
 import HostVertical from "../images/real/host-vertical.jpg";
+import { Button } from "../components/ui";
+import { black } from "../constants/ui/colors";
 
 type Props = {};
 
@@ -14,7 +16,15 @@ const TryHosting = (props: Props) => {
         <p className="subtitle">
           Earn up to $4,679 AUD/month by sharing your space in Sydney.
         </p>
-        <button>Learn more</button>
+        <div className="button-wrapper">
+          <Button
+            bgColor="#fff"
+            text="Learn more"
+            textColor={black}
+            padding={"8px 16px"}
+            fontSize={"14px"}
+          ></Button>
+        </div>
       </TextContent>
 
       <picture>

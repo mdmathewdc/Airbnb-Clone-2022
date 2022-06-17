@@ -12,7 +12,14 @@ const WhenAreYou = (props: Props) => {
       <div>When are you travelling?</div>
       <p>Add dates for updated price and availability</p>
       <div className="button-wrapper">
-        <Button bgColor={black} text="Add dates" textColor="#fff"></Button>
+        <Button
+          bgColor={black}
+          text="Add dates"
+          textColor="#fff"
+          padding={"16px 24px"}
+          fontSize={"16px"}
+          width={"100%"}
+        ></Button>
       </div>
     </StyledWhenAreYou>
   );
@@ -38,7 +45,6 @@ export const StyledWhenAreYou = styled.div`
   @media ${device.TABLET} {
     .button-wrapper {
       display: table;
-
     }
     div {
       font-size: 26px;
