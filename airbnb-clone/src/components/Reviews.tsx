@@ -28,7 +28,7 @@ const Reviews = (props: Props) => {
       star: 5,
       description:
         "“A fantastic apartment with a wonderful host!  The apartment was warm and cosy (despite the 2-degree cold outside), with plenty of space for two, and beautifully decorated throughout.”",
-      name: "Downey",
+      name: "Do",
       location: "Australia",
     },
     {
@@ -36,7 +36,7 @@ const Reviews = (props: Props) => {
       star: 4,
       description:
         "“We really appreciated you making it so easy for our late arrival. We really enjoyed the balcony and the cafe next door - delicious. Thank you also for the wine - we will be back!”",
-      name: "Hemsworth",
+      name: "He",
       location: "Australia",
     },
   ];
