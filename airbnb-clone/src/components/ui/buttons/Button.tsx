@@ -24,6 +24,7 @@ export const StyledButton = styled.button<{
   padding: 16px 24px;
   border-radius: 8px;
   border: none;
+  width: 100%;
 
   label {
     font-size: 16px;
