@@ -20,7 +20,7 @@ const Reviews = (props: Props) => {
       star: 5,
       description:
         "“I absolutely loved our stay at this property. Located in a quiet street a short walk to restaurants and cafes in North Hobart, it was even better than the pictures”",
-      name: "Downey",
+      name: "Johansson",
       location: "Australia",
     },
     {
@@ -28,7 +28,7 @@ const Reviews = (props: Props) => {
       star: 5,
       description:
         "“A fantastic apartment with a wonderful host!  The apartment was warm and cosy (despite the 2-degree cold outside), with plenty of space for two, and beautifully decorated throughout.”",
-      name: "Evans",
+      name: "Downey",
       location: "Australia",
     },
     {
