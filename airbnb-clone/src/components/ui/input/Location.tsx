@@ -15,7 +15,7 @@ const Location = (props: Props) => {
 };
 
 export const StyledLocation = styled.div`
-  padding: 12px 16px 10px 16px;
+  padding: 10px 16px;
   border: 1px solid ${lightGrey};
   border-radius: 8px;
 
