@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { device } from "../../constants/ui/breakpoints";
 import { primary, grey } from "../../constants/ui/colors";
 import Button from "./buttons/Button";
+import Pill from "./buttons/Pill";
 
 type Props = {};
 
@@ -31,6 +32,7 @@ const SearchBox = (props: Props) => {
       <Subtitle>
         Discover entire homes and private rooms perfect for any trip.
       </Subtitle>
+      <Pill margin={"0 0 0 16px"} />
       <Button
         bgColor={primary}
         text="Search"
