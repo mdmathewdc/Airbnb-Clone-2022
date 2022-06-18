@@ -29,7 +29,7 @@ const Reviews = (props: Props) => {
       description:
         "“A fantastic apartment with a wonderful host!  The apartment was warm and cosy (despite the 2-degree cold outside), with plenty of space for two, and beautifully decorated throughout.”",
       name: "Downey",
-      location: "Australia",
+      location: "U.S.A",
     },
     {
       picture: "home3",
