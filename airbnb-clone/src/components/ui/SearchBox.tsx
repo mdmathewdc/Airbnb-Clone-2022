@@ -1,7 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 import { device } from "../../constants/ui/breakpoints";
-import { grey } from "../../constants/ui/colors";
+import { primary, grey } from "../../constants/ui/colors";
+import Button from "./buttons/Button";
 
 type Props = {};
 
@@ -15,7 +16,6 @@ const SearchBox = (props: Props) => {
       <input type={"text"} placeholder={"LOCATION"} />
       <input type={"text"} placeholder={"LOCATION"} />
       <input type={"text"} placeholder={"LOCATION"} />
-      <input type={"text"} placeholder={"LOCATION"} />
       <Subtitle>
         Discover entire homes and private rooms perfect for any trip.
       </Subtitle>
@@ -31,6 +31,16 @@ const SearchBox = (props: Props) => {
       <Subtitle>
         Discover entire homes and private rooms perfect for any trip.
       </Subtitle>
+      <Button
+        bgColor={primary}
+        text="Search"
+        textColor="#fff"
+        fontSize="16px"
+        padding={"16px 24px"}
+        fontWeight="600"
+        width={"100%"}
+        searchIcon={true}
+      />
     </StyledSearchBox>
   );
 };

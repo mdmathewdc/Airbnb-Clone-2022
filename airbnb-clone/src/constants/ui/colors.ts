@@ -6,4 +6,4 @@ export const darkGrey = '#484848';
 
 export const lightGrey = '#EBEBEB';
 
-export const primary = '#e51c57s';
+export const primary = '#dd0e62';

@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { ReactComponent as SearchIcon } from "../../../images/svg/magnifying-glass.svg";
 
 type ButtonProps = {
   bgColor: string;
@@ -8,6 +9,8 @@ type ButtonProps = {
   padding: string;
   fontSize: string;
   width?: string;
+  fontWeight?: string;
+  searchIcon?: boolean;
 };
 
 const Button = ({
@@ -17,6 +20,8 @@ const Button = ({
   padding,
   fontSize,
   width,
+  fontWeight,
+  searchIcon,
 }: ButtonProps) => {
   return (
     <StyledButton
@@ -25,8 +30,12 @@ const Button = ({
       padding={padding}
       fontSize={fontSize}
       width={width}
+      fontWeight={fontWeight}
     >
-      <label>{text}</label>
+      <div className="icon-wrapper">
+        {searchIcon && <SearchIcon />}
+        <label>{text}</label>
+      </div>
     </StyledButton>
   );
 };
@@ -37,7 +46,9 @@ export const StyledButton = styled.button<{
   padding: string;
   fontSize: string;
   width?: string;
+  fontWeight?: string;
 }>`
+  cursor: pointer;
   background: ${(props) => props.bgColor};
   color: ${(props) => props.textColor};
   padding: ${(props) => props.padding};
@@ -45,9 +56,18 @@ export const StyledButton = styled.button<{
   border: none;
   width: ${(props) => props.width};
 
+  .icon-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0;
+    gap: 8px;
+  }
+
   label {
     font-size: ${(props) => props.fontSize};
     line-height: 20px;
+    font-weight: ${(props) => props.fontWeight};
   }
 `;
 export default Button;
