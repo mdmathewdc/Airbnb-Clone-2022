@@ -66,7 +66,7 @@ export const StyledSearchBox = styled.div`
     margin-top: 40px;
     margin-bottom: 43px;
     border-radius: 12px;
-    width: 420px;
+    width: 400px;
     box-shadow: 0 6px 20px rgb(0 0 0 / 20%);
 
     h1 {

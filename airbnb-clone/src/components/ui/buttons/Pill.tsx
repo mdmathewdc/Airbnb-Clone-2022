@@ -18,7 +18,7 @@ const Pill = (props: PillProps) => {
     <StyledPill>
       <BoldText text="AMENITIES" margin={"0 0 0 16px"} />
       {pillData.map((pill, index) => {
-        setSelected([...selected, index]);
+        // setSelected([...selected, index]);
         return <button onClick={toggleState}>{pill}</button>;
       })}
     </StyledPill>
