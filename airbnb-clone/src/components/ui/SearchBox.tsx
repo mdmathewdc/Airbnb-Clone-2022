@@ -32,7 +32,7 @@ const SearchBox = (props: Props) => {
       <Subtitle>
         Discover entire homes and private rooms perfect for any trip.
       </Subtitle>
-      <Pill margin={"0 0 0 16px"} />
+      <Pill />
       <Button
         bgColor={primary}
         text="Search"

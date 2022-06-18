@@ -7,6 +7,7 @@ const GlobalStyle = createGlobalStyle`
 * {
   padding: 0;
   margin: 0;
+  font-family: 'Circular', sans-serif;
 }
 
 body {
@@ -16,7 +17,6 @@ body {
   width: 100%;
   font-size: 14px;
   box-sizing: border-box;
-  font-family: 'Circular', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
