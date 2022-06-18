@@ -4,6 +4,7 @@ import { device } from "../../constants/ui/breakpoints";
 import { primary, grey } from "../../constants/ui/colors";
 import Button from "./buttons/Button";
 import Pill from "./buttons/Pill";
+import Location from "./input/Location";
 
 type Props = {};
 
@@ -14,7 +15,7 @@ const SearchBox = (props: Props) => {
       <Subtitle>
         Discover entire homes and private rooms perfect for any trip.
       </Subtitle>
-      <input type={"text"} placeholder={"LOCATION"} />
+      <Location />
       <input type={"text"} placeholder={"LOCATION"} />
       <input type={"text"} placeholder={"LOCATION"} />
       <Subtitle>
