@@ -7,3 +7,5 @@ export const darkGrey = '#484848';
 export const lightGrey = '#EBEBEB';
 
 export const primary = '#dd0e62';
+
+export const pillBackground = '#f7f7f7';
