@@ -5,6 +5,8 @@ import { primary, grey } from "../../constants/ui/colors";
 import Button from "./buttons/Button";
 import Pill from "./buttons/Pill";
 import Location from "./input/Location";
+import CheckIn from "./input/CheckIn";
+import Adults from "./input/Adults";
 
 type Props = {};
 
@@ -16,23 +18,8 @@ const SearchBox = (props: Props) => {
         Discover entire homes and private rooms perfect for any trip.
       </Subtitle>
       <Location />
-      <input type={"text"} placeholder={"LOCATION"} />
-      <input type={"text"} placeholder={"LOCATION"} />
-      <Subtitle>
-        Discover entire homes and private rooms perfect for any trip.
-      </Subtitle>
-
-      <Subtitle>
-        Discover entire homes and private rooms perfect for any trip.
-      </Subtitle>
-
-      <Subtitle>
-        Discover entire homes and private rooms perfect for any trip.
-      </Subtitle>
-
-      <Subtitle>
-        Discover entire homes and private rooms perfect for any trip.
-      </Subtitle>
+      <CheckIn />
+      <Adults />
       <Pill />
       <Button
         bgColor={primary}
