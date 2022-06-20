@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useCallback } from "react";
 
-const InputFocus = (ref: React.RefObject<HTMLInputElement>) => {
+const InputFocus = (ref: React.RefObject<HTMLInputElement | HTMLSelectElement>) => {
   const [focused, setFocused] = useState(false);
 
   const focusEvent = useCallback(() => {

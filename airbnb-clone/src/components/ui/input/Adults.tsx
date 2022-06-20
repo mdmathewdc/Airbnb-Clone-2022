@@ -7,8 +7,8 @@ import useInputFocus from "../../hooks/useInputFocus";
 type Props = {};
 
 const Adults = (props: Props) => {
-  const adultsRef = useRef<HTMLInputElement>(null);
-  const childrenRef = useRef<HTMLInputElement>(null);
+  const adultsRef = useRef<HTMLSelectElement>(null);
+  const childrenRef = useRef<HTMLSelectElement>(null);
 
   const adultsFocus = useInputFocus(adultsRef);
   const childrenFocus = useInputFocus(childrenRef);
@@ -17,12 +17,32 @@ const Adults = (props: Props) => {
     <AdultsWrapper adultsFocus={adultsFocus} childrenFocus={childrenFocus}>
       <StyledInputWrapper className="adults" focused={adultsFocus}>
         <BoldText text="ADULTS" margin={"0"} />
-        <input ref={adultsRef} type="text" placeholder="Add Date" />
+        <select ref={adultsRef}>
+        <optgroup>
+
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          </optgroup>
+
+        </select>
       </StyledInputWrapper>
       <span> </span>
       <StyledInputWrapper className="children" focused={childrenFocus}>
         <BoldText text="CHILDREN" margin={"0"} />
-        <input ref={childrenRef} type="text" placeholder="Add Date" />
+        <select ref={childrenRef}>
+        <optgroup>
+
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          </optgroup>
+
+        </select>
       </StyledInputWrapper>
     </AdultsWrapper>
   );
@@ -38,8 +58,7 @@ const AdultsWrapper = styled.div<{
   .adults {
     border-right: none;
     border-top-right-radius: ${(props) => (props.adultsFocus ? "8px" : "0")};
-    border-bottom-right-radius: ${(props) =>
-      props.adultsFocus ? "8px" : "0"};
+    border-bottom-right-radius: ${(props) => (props.adultsFocus ? "8px" : "0")};
   }
 
   .children {
@@ -65,13 +84,11 @@ export const StyledInputWrapper = styled.div<{ focused: boolean }>`
   border: 1px solid ${lightGrey};
   border-radius: 8px;
 
-  input {
+  select {
     border: none;
     padding: 4px 0 0 0;
+    font-size: 16px;
 
-    &::placeholder {
-      font-size: 16px;
-    }
     &:focus {
       outline: none;
     }
