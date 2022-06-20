@@ -65,6 +65,7 @@ export const StyledButton = styled.button<{
   }
 
   label {
+    cursor: pointer;
     font-size: ${(props) => props.fontSize};
     line-height: 20px;
     font-weight: ${(props) => props.fontWeight};

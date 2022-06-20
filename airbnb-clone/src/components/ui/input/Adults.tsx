@@ -3,6 +3,7 @@ import styled, { css } from "styled-components";
 import BoldText from "../buttons/BoldText";
 import { lightGrey } from "../../../constants/ui/colors";
 import useInputFocus from "../../hooks/useInputFocus";
+import { ReactComponent as ChevronDown } from "../../../images/svg/dropdown.svg";
 
 type Props = {};
 
@@ -17,36 +18,48 @@ const Adults = (props: Props) => {
     <AdultsWrapper adultsFocus={adultsFocus} childrenFocus={childrenFocus}>
       <StyledInputWrapper className="adults" focused={adultsFocus}>
         <BoldText text="ADULTS" margin={"0"} />
+        <SelectWrapper>
         <select ref={adultsRef}>
-        <optgroup>
-
-          <option value="1">1</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-          <option value="4">4</option>
-          <option value="5">5</option>
+          <optgroup>
+            <option value="1">1</option>
+            <option value="2" selected>
+              2
+            </option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
           </optgroup>
-
         </select>
+        <ChevronDown />
+        </SelectWrapper>
+
       </StyledInputWrapper>
       <span> </span>
       <StyledInputWrapper className="children" focused={childrenFocus}>
         <BoldText text="CHILDREN" margin={"0"} />
+        <SelectWrapper>
         <select ref={childrenRef}>
-        <optgroup>
-
-          <option value="1">1</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-          <option value="4">4</option>
-          <option value="5">5</option>
+          <optgroup>
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
           </optgroup>
-
         </select>
+        <ChevronDown />
+        </SelectWrapper>
       </StyledInputWrapper>
     </AdultsWrapper>
   );
 };
+
+const SelectWrapper = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+`;
 
 const AdultsWrapper = styled.div<{
   adultsFocus: boolean;
@@ -88,10 +101,16 @@ export const StyledInputWrapper = styled.div<{ focused: boolean }>`
     border: none;
     padding: 4px 0 0 0;
     font-size: 16px;
+    -moz-appearance: none;
+    -webkit-appearance: none;
 
     &:focus {
       outline: none;
     }
+
+    &::-ms-expand {
+      display: none;
+  }
   }
 
   &::after {
