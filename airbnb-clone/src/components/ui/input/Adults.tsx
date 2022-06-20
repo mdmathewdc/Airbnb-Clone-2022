@@ -16,43 +16,40 @@ const Adults = (props: Props) => {
 
   const openDropdown = (event: any) => {
     console.log(event);
-  }
+  };
 
   return (
     <AdultsWrapper adultsFocus={adultsFocus} childrenFocus={childrenFocus}>
       <StyledInputWrapper className="adults" focused={adultsFocus}>
         <BoldText text="ADULTS" margin={"0"} />
         <SelectWrapper onClick={openDropdown}>
-        <select ref={adultsRef}>
-          <optgroup>
-            <option value="1">1</option>
-            <option value="2" defaultValue="2">
-              2
-            </option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-          </optgroup>
-        </select>
-        <ChevronDown />
+          <select ref={adultsRef} defaultValue="2">
+            <optgroup>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+            </optgroup>
+          </select>
+          <ChevronDown />
         </SelectWrapper>
-
       </StyledInputWrapper>
       <span> </span>
       <StyledInputWrapper className="children" focused={childrenFocus}>
         <BoldText text="CHILDREN" margin={"0"} />
         <SelectWrapper>
-        <select ref={childrenRef}>
-          <optgroup>
-            <option value="0">0</option>
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-          </optgroup>
-        </select>
-        <ChevronDown />
+          <select ref={childrenRef}>
+            <optgroup>
+              <option value="0">0</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+            </optgroup>
+          </select>
+          <ChevronDown />
         </SelectWrapper>
       </StyledInputWrapper>
     </AdultsWrapper>
