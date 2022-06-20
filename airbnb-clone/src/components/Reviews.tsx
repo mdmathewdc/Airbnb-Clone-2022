@@ -42,7 +42,7 @@ const Reviews = (props: Props) => {
   ];
 
   const renderStars = (stars: number) => {
-    return [...Array(stars)].map((e, i) => <StyledStar />);
+    return [...Array(stars)].map((e, i) => <StyledStar key={i} />);
   };
 
   const getImageUrl = (name: string) => {
@@ -60,7 +60,7 @@ const Reviews = (props: Props) => {
       </TextContainer>
       <ReviewsContainer>
         {reviewsData.map((item, index) => (
-          <div className="review-wrapper">
+          <div className="review-wrapper" key={index}>
             <img className="house-image" src={getImageUrl(item.picture)} />
             <div className="star-wrapper">{renderStars(item.star)}</div>
             <p className="description">{item.description}</p>

@@ -48,7 +48,7 @@ const Features = (props: Props) => {
   return (
     <StyledFeatures>
       {featuresData.map((feature, index) => (
-        <div className="feature-tile">
+        <div className="feature-tile" key={index}>
           <div className="icon">{renderIcon(feature.icon)}</div>
           <div className="name">{feature.name}</div>
           <div className="description">{feature.description}</div>

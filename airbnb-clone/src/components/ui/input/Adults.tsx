@@ -14,15 +14,19 @@ const Adults = (props: Props) => {
   const adultsFocus = useInputFocus(adultsRef);
   const childrenFocus = useInputFocus(childrenRef);
 
+  const openDropdown = (event: any) => {
+    console.log(event);
+  }
+
   return (
     <AdultsWrapper adultsFocus={adultsFocus} childrenFocus={childrenFocus}>
       <StyledInputWrapper className="adults" focused={adultsFocus}>
         <BoldText text="ADULTS" margin={"0"} />
-        <SelectWrapper>
+        <SelectWrapper onClick={openDropdown}>
         <select ref={adultsRef}>
           <optgroup>
             <option value="1">1</option>
-            <option value="2" selected>
+            <option value="2" defaultValue="2">
               2
             </option>
             <option value="3">3</option>
@@ -59,6 +63,7 @@ const SelectWrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
+  cursor: pointer;
 `;
 
 const AdultsWrapper = styled.div<{

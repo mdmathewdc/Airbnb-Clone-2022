@@ -21,7 +21,7 @@ const Pill = (props: PillProps) => {
       {pillData.map((pill, index) => {
         // setSelected([...selected, index]);
         return (
-          <button onClick={toggleState} value={pill}>
+          <button key={index} onClick={toggleState} value={pill}>
             {pill}
           </button>
         );
