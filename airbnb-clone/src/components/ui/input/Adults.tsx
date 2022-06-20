@@ -28,7 +28,7 @@ const Adults = (props: Props) => {
               <option value="5">5</option>
             </optgroup>
           </select>
-          <ChevronDown />
+          <StyledChevronDown />
         </SelectWrapper>
       </StyledInputWrapper>
       <span> </span>
@@ -45,20 +45,25 @@ const Adults = (props: Props) => {
               <option value="5">5</option>
             </optgroup>
           </select>
-          <ChevronDown />
+          <StyledChevronDown />
         </SelectWrapper>
       </StyledInputWrapper>
     </AdultsWrapper>
   );
 };
 
+const StyledChevronDown = styled(ChevronDown)`
+  position: absolute;
+  pointer-events: none;
+`;
+
 const SelectWrapper = styled.div`
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
 
   > svg {
-    cursor: pointer;
     position: absolute;
     right: 15px;
   }
@@ -101,7 +106,6 @@ export const StyledInputWrapper = styled.div<{ focused: boolean }>`
   border-radius: 8px;
 
   select {
-    cursor: pointer;
     flex-grow: 1;
     border: none;
     padding: 4px 0 0 0;
