@@ -59,6 +59,8 @@ const SelectWrapper = styled.div`
 
   > svg {
     cursor: pointer;
+    position: absolute;
+    right: 15px;
   }
 `;
 
